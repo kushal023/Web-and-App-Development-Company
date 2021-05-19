@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="Stylesheet" type="text/css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <div class="flex">
+                <div class="logo">
+                    <a href="#">ABC <span>Company</span> </a>
+                </div>
+                <nav>
+                    <button id="nav-toggle" class="hamburger-menu">
+                        <span class="strip"></span>
+                        <span class="strip"></span>
+                        <span class="strip"></span>
+                    </button>
+                    <ul id="nav-menu-container">
+                       <li><a href="about.html">About</a></li>
+                       <li><a href="service.html">Service</a></li>
+                       <li><a href="#">Projects</a></li>
+                       <li><a href="#">Clients</a></li>
+                       <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="hero-image">
+                <img src="digital.jpg" alt="My Comapny Hero Image"/>
+                <div class="hero-marketing-bar">
+                    <h3>Developing Innovation Stratefies</h3>
+                    <h1>Achieving Growth</h1>
+                </div>
+
+            </section>
+            <section class="marketing-boxes">
+                <div class="flex">
+                    <div class="box">
+                        <h2>Services</h2>
+                    <p>We build enterprise-grade custom software solutions that enable businesses to unlock innovation and leverage digital transformation. We work from concept to code, and development to deployment making sure cost, time & quality of software development is optimized.</p>
+                    <a href="javascript:void();" class="readmore-btn">More Info</a>
+                    </div>
+
+                    <div class="box">
+                        <h2>Projects</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius necessitatibus modi sint sed tempore odio! Excepturi magni, obcaecati numquam incidunt non molestiae, nisi pariatur ut doloremque nulla, quis quasi? Vitae dignissimos veritatis voluptas corrupti, nostrum corporis? Ex animi deserunt ea laborum adipisci beatae reiciendis, cum eligendi dolore nam vitae qui! Lorem ipsum dolor sit amet consectetur adipisicin</p>
+                    <a href="javascript:void();" class="readmore-btn">More Info</a>
+                    </div>
+                    
+                    <div class="box">
+                        <h2>Clients</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Qui voluptate in laborum aut! Corrupti ea nulla temporibus nostrum, quisquam quaerat aspernatur numquam nesciunt omnis possimus, tempora iste. Et nulla quisquam laborum magni iure distinctio eos repellat modi sint dicta, optio illum. Fugiat, pariatur. Asperiores rerum officia assumenda a obcaecati consequatur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, provident.</p>
+                    <a href="javascript:void();" class="readmore-btn">More Info</a>
+                    </div>
+                    
+                    
+                </div>
+            </section>
+            <section class="about-us">
+                <h1>About Us</h1>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Possimus, cupiditate!
+                    <br/><br/>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus, cupiditate.
+                </p>
+                <button>Read More</button>
+            </section>
+
+            <section class="contact-us">
+                <h1>Contact Us
+                </h1>
+                <div class="flex">
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27004.27434944674!2d76.30165564385251!3d32.21677734324862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391b50df65bd7311%3A0x3e08bdb100c6dc10!2sDharamshala%2C%20Himachal%20Pradesh!5e0!3m2!1sen!2sin!4v1621251083394!5m2!1sen!2sin" width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="contact-form">
+                        <address>
+                            Dharamshala, Himachal Pradesh
+                        </address>
+                        <form>
+                            <input type="text" name="name" id="name" placeholder="Name"/>
+                            <input type="text" name="email" id="email" placeholder="Email"/>
+                            <input type="text" name="subject" id="subject" placeholder="Subject"/>
+                            <textarea id="message" placeholder="Type your message here..."></textarea>
+                            <button>Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <div class="flex">
+                <small>&copy, 2021 ABC Company. Proudly created by ABC Company</small>
+                
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function(){
+            let navMenu=document.getElementById('nav-menu-container');
+            navMenu.style.display=navMenu.offsetParent===null? 'block':'none';
+
+        });
+    </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>$(".readmore-btn").on('click', function(){
+    $(this).parent().toggleClass("showContent");
+
+    var replaceText=$(this).parent().hasClass("showContent") ? "Read Less" : "Read More";
+
+    $(this).text(replaceText);
+
+});
+</script>
+</body>
+</html>
